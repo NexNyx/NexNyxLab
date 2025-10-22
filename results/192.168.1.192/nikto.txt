@@ -1,0 +1,21 @@
+- Nikto v2.1.5/2.1.5
++ Target Host: 192.168.1.192
++ Target Port: 80
++ GET /: Retrieved x-powered-by header: PHP/5.2.4-2ubuntu5.10
++ GET /: The anti-clickjacking X-Frame-Options header is not present.
++ HEAD /: Apache/2.2.8 appears to be outdated (current is at least Apache/2.2.22). Apache 1.3.42 (final release) and 2.0.64 are also current.
++ DEBUG HASH(0x5a2ca0078c30): DEBUG HTTP verb may show server debugging information. See http://msdn.microsoft.com/en-us/library/e8z01xdh%28VS.80%29.aspx for details.
++ -877: TRACE /: HTTP TRACE method is active, suggesting the host is vulnerable to XST
++ -3233: GET /phpinfo.php: /phpinfo.php: Contains PHP configuration information
++ -3268: GET /doc/: /doc/: Directory indexing found.
++ -48: GET /doc/: /doc/: The /doc/ directory is browsable. This may be /usr/doc.
++ -12184: GET /index.php?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000: /index.php?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ -3092: GET /phpMyAdmin/changelog.php: /phpMyAdmin/changelog.php: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.
++ GET /phpMyAdmin/: Cookie phpMyAdmin created without the httponly flag
++ -3092: GET /phpMyAdmin/: /phpMyAdmin/: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.
++ -3268: GET /test/: /test/: Directory indexing found.
++ -3092: GET /test/: /test/: This might be interesting...
++ -3268: GET /icons/: /icons/: Directory indexing found.
++ GET /icons/README: Server leaks inodes via ETags, header found with file /icons/README, inode: 412190, size: 5108, mtime: 0x438c0358aae80
++ -3233: GET /icons/README: /icons/README: Apache default file found.
++ GET /phpMyAdmin/: /phpMyAdmin/: phpMyAdmin directory found
